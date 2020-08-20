@@ -22,13 +22,13 @@ class Proprietario{
 	private $nome;
 	private $CPF;
 	private $RG;
-	public $dt_Nasc;
-	public $rua;
-	public $bairro;
-	public $estado;
-	public $CEP;
-	public $complemento;
-	public function __construct($nome, $CPF, $RG){
+	private $dt_Nasc;
+	private $rua;
+	private $bairro;
+	private $estado;
+	private $CEP;
+	private $complemento;
+	private function __construct($nome, $CPF, $RG){
 		$this-> nome = $nome;
 		$this-> cpf = $CPF;
 		$this-> rg = $RG;
@@ -36,22 +36,30 @@ class Proprietario{
 }
 
 class carro{
-	public $modelo;
-	public $cor;
-	public $ano;
-	public $marca;
-	public $chassi;
+	private $modelo;
+	private $cor;
+	private $ano;
+	private $marca;
+	private $chassi;
 	private $proprietario;
-	public $vel_max;
-	public $vel_atual;
-	public $nr_portas;
-	public $tetosolar;
-	public $cambio_aut;
-	public $vol_combustivel;
+	private $vel_max;
+	private $vel_atual;
+	private $nr_portas;
+	private $tetosolar;
+	private $cambio_aut;
+	private $vol_combustivel;
 }
 
 //3. encapsulamento
+function setProprietario($Proprietario){
+	
+}
 
-	?>
+function GetProprietario(){
+	echo"proprietario é: {$this->Proprietario}";
+}
+
+?>
+
 
 </body>
