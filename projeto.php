@@ -18,11 +18,11 @@ tetosolar (s/n), cambio aut(s/n), vol_combustivel
 */
 //1.implemente uma classe proprietario
 class Proprietario{
-	function GetProprietario(){
-	return $this->$proprietario;
+	public function getProprietario(){
+		return $this->proprietario;
 }
-	function setProprietario($Proprietario){
-	
+	public function setProprietario($Proprietario){
+		$this->proprietario=$proprietario;
 }
 
 //2. declare os segintes atributos
