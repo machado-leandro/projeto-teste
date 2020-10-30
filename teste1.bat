@@ -12,10 +12,9 @@ echo 			Menu Tarefas
 
 echo ==================================
 echo * 1. esvaziar lixeira            *
-echo * 2. comparar tamanho            *
-echo * 3. gerar pdf                   *
-echo * 4. deletar arquivos            *
-echo * 5. sair                        *
+echo * 2. gerar pdf                   *
+echo * 3. deletar arquivos            *
+echo * 4. sair                        *
 echo *                                *
 echo ==================================
 
@@ -29,15 +28,14 @@ if %opcao% GEQ 5 goto opcao5
 
 :opcao1
 cls
-set recyclebin=%systemdrive%\$recycle.bin\%uid%
-rd /s c:$Recycle.bin
+rd /s /q recycler
 echo ==================================
 echo *		Lixeira Esvaziada         *
 echo ==================================
 pause
 goto menu
 
-:opcao3
+:opcao2
 cls
 xcopy c:\users\%username%\Desktop\"diretorio f"  c:\users\%username%\Desktop\"teste"
 echo ==================================
@@ -45,3 +43,10 @@ echo *        pdfs gerados            *
 echo ==================================
 pause
 goto menu
+
+:opcao3
+cls
+
+:opcao4
+cls
+exit
