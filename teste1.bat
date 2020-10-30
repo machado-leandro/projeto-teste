@@ -24,13 +24,12 @@ if %opcao% equ 1 goto opcao1
 if %opcao% equ 2 goto opcao2
 if %opcao% equ 3 goto opcao3
 if %opcao% equ 4 goto opcao4
-if %opcao% GEQ 5 goto opcao5
 
 :opcao1
 cls
-rd /s /q recycler
+rd /s /q c:\$recycle.Bin\
 echo ==================================
-echo *		Lixeira Esvaziada         *
+echo *        Lixeira Esvaziada       *
 echo ==================================
 pause
 goto menu
@@ -46,6 +45,12 @@ goto menu
 
 :opcao3
 cls
+del c:\users\%username%\Desktop\"teste"\*.*
+echo ==================================
+echo *       arquivos deletados       *
+echo ==================================
+pause
+goto menu
 
 :opcao4
 cls
